@@ -1,0 +1,93 @@
+.container-weather {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+
+.container-card {
+  background-color: #4d4d4d;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 400px;
+  box-shadow: 6px 12px 20px #8e8e8e;
+
+}
+
+.container-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.container-icons > img {
+
+}
+
+
+.container-seacher {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom :20px;
+}
+
+
+.container-seacher > form > input {
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+
+
+
+.container-seacher > form > input:focus {
+  outline: none;
+  border: none;
+}
+
+.container-seacher > form > button {
+  background-color: yellow;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+
+.container-grafico {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container-grafico > table {
+  text-align: left;
+  font-size: 15px;
+  color: aliceblue;
+}
+
+.container-grafico table th,
+.container-grafico table td {
+  border: 1px solid yellow;
+  padding: 2px;
+}

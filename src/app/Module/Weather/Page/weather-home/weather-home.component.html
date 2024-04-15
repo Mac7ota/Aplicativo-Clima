@@ -1,0 +1,56 @@
+<div class="container-weather">
+
+  <div class="container-card">
+    <div class="container-icons"> <img [src]="Weather && Weather.timezone > 6 && Weather.timezone < 18 ? '../../../../../assets/Img/sun.png' : '../../../../../assets/Img/moon.png'" /> </div>
+
+    <div class="container-seacher">
+
+  <form #form="ngForm" (submit)="OnSubmit()">
+    <input type="text" name="city" placeholder="Pesquisar Cidade" [(ngModel)]="cityinitial">
+    <button type="submit">Buscar</button>
+  </form>
+  </div>
+
+  <div class="container-grafico">
+  <table>
+    <tr>
+      <th>Nome</th>
+      <td *ngIf="Weather">{{Weather.name}}</td>
+    </tr>
+    <tr>
+      <th>Horá</th>
+      <td *ngIf="Weather">{{Weather.main.timezone}}</td>
+    </tr>
+    <tr>
+      <th>Temperatura</th>
+      <td *ngIf="Weather">{{Weather.main.temp}}</td>
+    </tr>
+    <tr>
+      <th>Descrição</th>
+      <td *ngIf="Weather">{{Weather.weather[0].description}}</td>
+    </tr>
+    <tr>
+      <th>Humidade</th>
+      <td *ngIf="Weather">{{Weather.main.humidity}}</td>
+    </tr>
+    <tr>
+      <th>Pressão</th>
+      <td *ngIf="Weather">{{Weather.main.pressure}}</td>
+    </tr>
+    <tr>
+      <th>Velocidade do Vento</th>
+      <td *ngIf="Weather">{{Weather.wind.speed}}</td>
+    </tr>
+    <tr>
+      <th>Direção do Vento</th>
+      <td *ngIf="Weather">{{Weather.wind.deg}}</td>
+    </tr>
+    <tr>
+      <th>Data</th>
+      <td *ngIf="Weather">{{Weather.dt}}</td>
+    </tr>
+  </table>
+</div>
+</div>
+</div>
+

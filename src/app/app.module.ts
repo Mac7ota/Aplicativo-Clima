@@ -1,16 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import { WeatherHomeComponent } from './Module/Page/weather-home/weather-home.component';
+import { WeatherHomeComponent } from './Module/Weather/Page/weather-home/weather-home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherHomeComponent
+    WeatherHomeComponent,
   ],
   imports: [
-    BrowserModule,  // Adicione esta linha
+    FormsModule,
+    BrowserModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
